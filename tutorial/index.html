@@ -861,7 +861,7 @@
 
 <div class="codeSnippet">
   <div class="location">
-    <a href="#code/app/backend/Main.scala:36">Main.scala:36</a>
+    <a href="#code/app/backend/Main.scala:37">Main.scala:37</a>
   </div>
   <pre><code>      val userMetaData = system.actorOf(UserMetaData.props, "userMetaData")</code></pre>
 </div>
@@ -872,7 +872,7 @@
 
 <div class="codeSnippet">
   <div class="location">
-    <a href="#code/app/backend/Main.scala:43">Main.scala:43</a>
+    <a href="#code/app/backend/Main.scala:44">Main.scala:44</a>
   </div>
   <pre><code>      system.actorOf(BotManager.props(regionManagerClient, userMetaData, findUrls(1)))</code></pre>
 </div>
@@ -1433,7 +1433,7 @@ class UserMetaData extends EventsourcedProcessor {
 
 <div class="codeSnippet">
   <div class="location">
-    <a href="#code/app/backend/Main.scala:33">Main.scala:33</a>
+    <a href="#code/app/backend/Main.scala:34">Main.scala:34</a>
   </div>
   <pre><code>
       ClusterSharding(system).start(
@@ -1445,7 +1445,7 @@ class UserMetaData extends EventsourcedProcessor {
 
 <div class="codeSnippet">
   <div class="location">
-    <a href="#code/app/backend/Main.scala:43">Main.scala:43</a>
+    <a href="#code/app/backend/Main.scala:44">Main.scala:44</a>
   </div>
   <pre><code>
       ClusterSharding(system).start(
@@ -1475,7 +1475,7 @@ class UserMetaData extends EventsourcedProcessor {
 
 <div class="codeSnippet">
   <div class="location">
-    <a href="#code/conf/application.conf:88">application.conf:88</a>
+    <a href="#code/conf/application.conf:84">application.conf:84</a>
   </div>
   <pre><code>
   persistence {
@@ -1560,7 +1560,7 @@ object SharedJournalHelper {
 
 <div class="codeSnippet">
   <div class="location">
-    <a href="#code/app/backend/Main.scala:31">Main.scala:31</a>
+    <a href="#code/app/backend/Main.scala:32">Main.scala:32</a>
   </div>
   <pre><code>    // This will not be needed with a distributed journal
     SharedJournalHelper.startupSharedJournal(system)
@@ -1629,6 +1629,7 @@ object SharedJournalHelper {
       In our case we use these information to specify the actor system name. The latter lines signal to ConductR that the app has started up.
       Also note that this code is only required when running pure Akka applications such as the backend of ReactiveMaps.
       For Play, no configuration or code change is necessary. Both the Akka and Play approaches utilize a library named
+
       <a href="#code/build.sbt" class="shortcut">conductr-bundle-lib</a>. That's it!
     </p>
 
